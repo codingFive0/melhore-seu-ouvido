@@ -1,12 +1,10 @@
-<?php require_once __DIR__ . "/../Core/Connect.php";
-
-use Source\Core\Connect;
+<?php
 
 /**
  *  GERENCIAMENTO DE ERROS
  */
 
-if ($_SERVER['HTTP_HOST'] = "localhost") {
+if ($_SERVER['HTTP_HOST'] == "localhost") {
     /**
      * DATABASE LOCAL
      */
@@ -26,16 +24,16 @@ if ($_SERVER['HTTP_HOST'] = "localhost") {
     /**
      * DATABASE PRODUCTION
      */
-    define("CONF_DB_HOST", "");
-    define("CONF_DB_USER", "");
-    define("CONF_DB_PASS", "");
-    define("CONF_DB_NAME", "");
+    define("CONF_DB_HOST", "54.39.85.210");
+    define("CONF_DB_USER", "treinese_treinese");
+    define("CONF_DB_PASS", "z7g(pT0mJUG9-4");
+    define("CONF_DB_NAME", "melhoreseuouvido");
 }
 
 /**
  * PROJECT URLs
  */
-define("CONF_URL_BASE", "http://localhost/melhore-seu-ouvido");
+define("CONF_URL_BASE", "https://www.treineseuouvido.online");
 define("CONF_URL_TEST", "http://localhost/melhore-seu-ouvido");
 
 /**
