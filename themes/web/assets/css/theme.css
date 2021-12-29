@@ -1,0 +1,99 @@
+.menu {
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.1);
+
+    font-size: 1.4em;
+}
+
+.menu > .content {
+    padding: 10px 0;
+}
+
+.box_feature_button {
+    padding: 10% 0 5% 0;
+}
+
+.box_feature_button .box_feature_buttom_circle {
+    padding: 50px;
+    color: #60C6FF;
+
+    background: #F6FDFF;
+    box-shadow: inset 0px 0px 45px -12px rgba(34, 202, 255, 0.4);
+}
+
+button.box_feature_buttom_circle:hover {
+    cursor: pointer;
+    box-shadow: inset 0px 0px 45px 24px rgba(34, 202, 255, 0.4);
+}
+
+button.box_feature_buttom_circle:disabled {
+    color: #9E9E9E;
+    box-shadow: inset 0px 0px 45px 24px rgba(158, 158, 158, 0.4);
+}
+
+/* FORM CONFIGS */
+
+input[type='radio']:checked ~ label.btn {
+    background-color: var(--color-primary);
+    border: 1px;
+    border-color: var(--color-primary);
+    border-style: solid;
+    color: #FFF;
+}
+
+/* MY CUSTOM ALERT VIEW */
+.my_alert {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.my_alert_mensage_box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: var(--color-primary);
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+}
+
+.my_alert_mensage_box > i {
+    margin-right: 20px;
+}
+
+.my_alert_mensage_box.sad {
+    width: 100%;
+    height: 100px;
+    background-color: var(--color-red);
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+.my_alert_mensage_box.happy {
+    width: 100%;
+    height: 100px;
+    background-color: var(--color-green);
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+}
