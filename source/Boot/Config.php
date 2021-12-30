@@ -4,7 +4,7 @@
  *  GERENCIAMENTO DE ERROS
  */
 
-if ($_SERVER['HTTP_HOST'] == "localhost") {
+if (strpos($_SERVER["HTTP_HOST"], "localhost")) {
     /**
      * DATABASE LOCAL
      */
@@ -20,6 +20,12 @@ if ($_SERVER['HTTP_HOST'] == "localhost") {
     ini_set('display_startup_erros', 1);
     error_reporting(E_ALL);
     date_default_timezone_set("America/Sao_Paulo");
+
+    /**
+     * DEFINES
+     */
+    define("ENVIROMENT", "local");
+
 } else {
     /**
      * DATABASE PRODUCTION
@@ -28,13 +34,18 @@ if ($_SERVER['HTTP_HOST'] == "localhost") {
     define("CONF_DB_USER", "treinese_treinese");
     define("CONF_DB_PASS", "z7g(pT0mJUG9-4");
     define("CONF_DB_NAME", "melhoreseuouvido");
+
+    /**
+     * DEFINES
+     */
+    define("ENVIROMENT", "production");
 }
 
 /**
  * PROJECT URLs
  */
 define("CONF_URL_BASE", "https://www.treineseuouvido.online");
-define("CONF_URL_TEST", "http://localhost/melhore-seu-ouvido");
+define("CONF_URL_TEST", "https://www.localhost/melhore-seu-ouvido");
 
 /**
  * PROJECT CONFIGS

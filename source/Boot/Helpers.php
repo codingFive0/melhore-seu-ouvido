@@ -271,7 +271,7 @@ function str_search(?string $search): string
  */
 function url(string $path = null): string
 {
-    if ($_SERVER['HTTP_HOST'] == "localhost") {
+    if (ENVIROMENT != "production") {
         if ($path) {
             return CONF_URL_TEST . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
         }
@@ -341,7 +341,7 @@ function session(): \Source\Core\Session
  */
 function theme(string $path = null, string $theme = CONF_VIEW_THEME): string
 {
-    if ($_SERVER['HTTP_HOST'] == "localhost") {
+    if (ENVIROMENT != "production") {
         if ($path) {
             return CONF_URL_TEST . "/themes/{$theme}/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
         }
