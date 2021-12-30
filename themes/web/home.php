@@ -14,29 +14,29 @@
     <!-- BOTÕES DE RESPOSTA -->
     <div class="container">
         <div class="content flex jc-center">
-            <form name="j_response" class="flex" method="post" action="<?= url("/resposta"); ?>">
+            <form name="j_response" class="flex form_format" method="post" action="<?= url("/resposta"); ?>">
                 <input type="hidden" name="soundName">
-                <div>
+                <div class="flex">
                     <input id="primeiro" type="radio" name="response" value="" class="off-visible">
                     <label class="radius btn btn-outline-theme transition" for="primeiro">
                         <i class="fa fa-check"></i><span class="j_opt_target">C</span>
                     </label>
                 </div>
 
-                <div>
+                <div class="flex">
                     <input id="segundo" type="radio" name="response" value="" class="off-visible">
                     <label class="radius btn btn-outline-theme transition" for="segundo">
                         <i class="fa fa-check"></i><span class="j_opt_target">G#</span>
                     </label>
                 </div>
-                <div>
+                <div class="flex">
                     <input id="terceiro" type="radio" name="response" value="" class="off-visible">
                     <label class="radius btn btn-outline-theme transition" for="terceiro">
                         <i class="fa fa-check"></i><span class="j_opt_target">D</span>
                     </label>
                 </div>
 
-                <div>
+                <div class="flex">
                     <input id="quarto" type="radio" name="response" value="" class="off-visible">
                     <label class="radius btn btn-outline-theme transition" for="quarto">
                         <i class="fa fa-check"></i><span class="j_opt_target">Eb</span>

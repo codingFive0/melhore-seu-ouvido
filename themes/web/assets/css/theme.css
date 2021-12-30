@@ -32,6 +32,10 @@ button.box_feature_buttom_circle:disabled {
 }
 
 /* FORM CONFIGS */
+.form_format {
+    justify-content: space-around;
+    align-content: space-around;
+}
 
 input[type='radio']:checked ~ label.btn {
     background-color: var(--color-primary);
@@ -97,3 +101,4 @@ input[type='radio']:checked ~ label.btn {
     justify-content: center;
     color: #FFFFFF;
 }
+
