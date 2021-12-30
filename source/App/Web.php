@@ -34,7 +34,7 @@ class Web extends Controller
     public function __construct($route)
     {
         parent::__construct($route, __DIR__ . "/../../themes/" . CONF_VIEW_THEME . "/");
-        Connect::getInstance();
+//        Connect::getInstance();
 //        (new Access())->report();
 //        (new Online())->report();
     }
