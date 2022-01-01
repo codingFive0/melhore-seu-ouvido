@@ -50,6 +50,9 @@
     <?php endif; ?>
     <script src="<?= theme("assets/scripts.js"); ?>"></script>
 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1254753736236685"
+            crossorigin="anonymous"></script>
+
     <?= $v->section('scripts') ?>
 </body>
 </html>
