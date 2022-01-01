@@ -11,7 +11,7 @@ if (strpos($_SERVER["HTTP_HOST"], "localhost")) {
     define("CONF_DB_HOST", "localhost");
     define("CONF_DB_USER", "root");
     define("CONF_DB_PASS", "");
-    define("CONF_DB_NAME", "igreja");
+    define("CONF_DB_NAME", "treinese");
 
     /**
      *  GERENCIAMENTO DE ERROS
@@ -30,10 +30,14 @@ if (strpos($_SERVER["HTTP_HOST"], "localhost")) {
     /**
      * DATABASE PRODUCTION
      */
-    define("CONF_DB_HOST", "54.39.85.210");
+    define("CONF_DB_HOST", "localhost");
     define("CONF_DB_USER", "treinese_treinese");
     define("CONF_DB_PASS", "z7g(pT0mJUG9-4");
     define("CONF_DB_NAME", "melhoreseuouvido");
+//    define("CONF_DB_HOST", "localhost");
+//    define("CONF_DB_USER", "agenciagalg_gerenciator");
+//    define("CONF_DB_PASS", "Senhaqualquer");
+//    define("CONF_DB_NAME", "agenciagalg_gerenciator");
 
     /**
      * DEFINES

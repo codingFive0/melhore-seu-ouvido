@@ -35,7 +35,7 @@ class Connect
                     self::OPTIONS
                 );
             } catch (\PDOException $exception) {
-                redirect("/ops/problemas");
+                redirect("/erro/500");
             }
         }
 

@@ -25,8 +25,17 @@
 
 <body class="bg-body">
     <header class="container menu ds-fixed">
-        <div class="content flex flex-3">
-            <h1 class="uppercase">Treine seu ouvido</h1>
+        <div class="content flex">
+            <div class="flex flex-4 alc-center">
+                <h1 class="uppercase">Treine seu ouvido</h1>
+            </div>
+            
+            <div class="flex flex-3 alc-center">
+                <ul class="menu_ul flex">
+                    <li class="menu_ul_item"><a href="<?= $route->route("web.home"); ?>">Treino Prático</a></li>
+                    <li class="menu_ul_item"><a href="<?= $route->route("web.challenge"); ?>">Desafio</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 

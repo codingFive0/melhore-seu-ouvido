@@ -260,6 +260,10 @@ input:-webkit-autofill {
     justify-content: center;
 }
 
+.alc-center {
+    align-content: center;
+}
+
 /* FUNCIONTS */
 .uppercase {
     text-transform: uppercase;

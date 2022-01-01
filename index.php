@@ -10,13 +10,19 @@ $route->get("/", "Web:home", "web.home");
 $route->post("/questoes", "Web:questions", "web.questions");
 $route->get("/questoes", "Web:questions", "web.questions");
 $route->post("/resposta", "Web:response", "web.response");
+$route->get("/desafio", "Web:challenge", "web.challenge");
+
+
+/* Errors */
+$route->get("/erro/{code}", "Errors:erro", "errors.erro");
+
 
 $route->dispatch();
 /**
  * ERROR REDIRECT
  */
 if ($route->error()) {
-    var_dump($route->error());
+    redirect(url("/erro/{$route->error()}"));
 }
 
 ob_end_flush();
