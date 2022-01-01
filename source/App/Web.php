@@ -108,7 +108,7 @@ class Web extends Controller
             "actGuitar"
         ];
         // DEFINE ALEATORIAMENTE O INTRUMENTO A SER TOCADO
-        $instrument = $intruments[random_int(0, 1)];
+        $instrument = $intruments[0];
 
         // DEFINE ALEATORIAMENTE A OITAVA A SER TOCADA
         $randOctave = random_int(-1, 1);
