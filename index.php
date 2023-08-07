@@ -1,9 +1,10 @@
-<?php ob_start();
+<?php
+ob_start();
 require __DIR__ . "/vendor/autoload.php";
 
 (new \Source\Core\Session());
 
-$route = (new \Source\Core\Routes(URL()));
+$route = (new \Source\Core\Routes(url()));
 
 $route->namespace("Source\App");
 $route->get("/", "Web:home", "web.home");

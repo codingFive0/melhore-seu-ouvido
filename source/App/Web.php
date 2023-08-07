@@ -27,7 +27,7 @@ class Web extends Controller
      * @var
      */
     private $location;
-
+    
     /**
      * Web constructor.
      */
@@ -38,7 +38,7 @@ class Web extends Controller
 //        (new Access())->report();
 //        (new Online())->report();
     }
-
+    
     /**
      * <b>Renderiza e controla a página incial<b>
      *
@@ -52,12 +52,12 @@ class Web extends Controller
             url(),
             url("shared/images/share.png")
         );
-
+        
         echo $this->view->render("home", [
             "head" => $head
         ]);
     }
-
+    
     public function questions(array $post)
     {
         $notes["-1"] = [
@@ -102,27 +102,27 @@ class Web extends Controller
             "G",
             ["G#", "Ab"]
         ];
-
+        
         $intruments = [
             "Keyboard",
             "actGuitar"
         ];
         // DEFINE ALEATORIAMENTE O INTRUMENTO A SER TOCADO
         $instrument = $intruments[0];
-
+        
         // DEFINE ALEATORIAMENTE A OITAVA A SER TOCADA
         $randOctave = random_int(-1, 1);
-
+        
         // DEFINE ALEATORIAMENTE AS NOTAS QUE SERÃO ESCOLHIDAS
         $definedNotes = [];
-
+        
         for ($i = 1; $i < 5; $i++) {
             $rand = mt_rand(0, count($notes[$randOctave]) - 1);
             $definedNotes[] = $notes[$randOctave][$rand];
             unset($notes[$randOctave][$rand]);
             $notes[$randOctave] = array_values($notes[$randOctave]);
         }
-
+        
         //Escolhe alternativas entre nomenclatura de notas (# ou b)
         $cleanDefinedNotes = [];
         foreach ($definedNotes as $value) {
@@ -133,9 +133,9 @@ class Web extends Controller
                 $cleanDefinedNotes[] = $value;
             }
         }
-
+        
         $reproducedNote = $cleanDefinedNotes[mt_rand(0, 3)];
-
+        
         $namedFilesBase = [
             "B#" => "B#_C",
             "C" => "B#_C",
@@ -152,23 +152,23 @@ class Web extends Controller
             "G#" => "G#_Ab",
             "Ab" => "G#_Ab"
         ];
-
+        
         $jsonResponse = [
             "midiaFile" => ($namedFilesBase[$reproducedNote] ?? $reproducedNote) . '-' . $instrument . "({$randOctave}).wav",
             "responseOptions" => $cleanDefinedNotes
         ];
         echo json_encode($jsonResponse);
     }
-
+    
     public function response(array $post)
     {
         $post = filter_var_array($post, FILTER_DEFAULT);
-
+        
         $file = $post['soundName'];
         $correntResponses = explode("_", substr($file, 0, mb_strpos($file, '-')));
         $response = $post['response'];
         sleep(2);
-
+        
         echo json_encode(["responseStatus" => in_array($response, $correntResponses)]);
     }
 }

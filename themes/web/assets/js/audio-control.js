@@ -1,7 +1,7 @@
 $(function () {
 
     function url(uri = null) {
-        return window.url + uri;
+        return window.url + (uri ? uri : '');
     }
 
     var fileTarget;
@@ -92,7 +92,7 @@ $(function () {
         });
 
         var audioFolder = url("/uploads/" + encodeURIComponent(fileTarget))
-        console.log(audioFolder)
+        
         player.jPlayer("setMedia", {
             title: "Ouça, Memorize, Busque Referencias e Responsa",
             mp3: audioFolder

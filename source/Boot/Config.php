@@ -4,14 +4,14 @@
  *  GERENCIAMENTO DE ERROS
  */
 
-if (strpos($_SERVER["HTTP_HOST"], "localhost")) {
+if (preg_match("/(localhost)/", $_SERVER["HTTP_HOST"])) {
     /**
      * DATABASE LOCAL
      */
     define("CONF_DB_HOST", "localhost");
     define("CONF_DB_USER", "root");
-    define("CONF_DB_PASS", "");
-    define("CONF_DB_NAME", "igreja");
+    define("CONF_DB_PASS", "1234");
+    define("CONF_DB_NAME", "melhoreseuouvido");
 
     /**
      *  GERENCIAMENTO DE ERROS
@@ -40,12 +40,11 @@ if (strpos($_SERVER["HTTP_HOST"], "localhost")) {
      */
     define("ENVIROMENT", "production");
 }
-
 /**
  * PROJECT URLs
  */
 define("CONF_URL_BASE", "https://www.treineseuouvido.online");
-define("CONF_URL_TEST", "https://www.localhost/melhore-seu-ouvido");
+define("CONF_URL_TEST", "http://localhost");
 
 /**
  * PROJECT CONFIGS
